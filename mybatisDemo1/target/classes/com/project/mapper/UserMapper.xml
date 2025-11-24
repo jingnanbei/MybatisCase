@@ -6,4 +6,8 @@
     <select id="findAll" resultType="com.project.pojo.User">
         select * from user
     </select>
+    <update id="update" parameterType="com.project.pojo.User">
+        update user set username = #{userName},sex = #{sex},address = #{address}
+        where id = #{id}
+    </update>
 </mapper>
