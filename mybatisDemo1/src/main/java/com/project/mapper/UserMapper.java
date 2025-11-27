@@ -9,4 +9,6 @@ import java.util.List;
 public interface UserMapper {
     List<User> findAll() ;
     void update(User user);
+    void delete(Integer id);
+    User findById(Integer id);
 }

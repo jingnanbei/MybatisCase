@@ -7,7 +7,18 @@
         select * from user
     </select>
     <update id="update" parameterType="com.project.pojo.User">
-        update user set username = #{userName},sex = #{sex},address = #{address}
+        update `user`
+        set username = #{userName},
+            sex = #{sex},
+            address = #{address}
         where id = #{id}
     </update>
+    <delete id="delete" parameterType="int" >
+        delete from user where id = #{id}
+    </delete>
+
+    <select id="findById" parameterType="int" resultType="com.project.pojo.User">
+        select * from user where id = #{id}
+    </select>
+
 </mapper>

@@ -37,4 +37,16 @@ public class UserMapperCRUDTest {
         userMapper.update(user);
         sqlSession.commit();
     }
+
+    @Test
+    public void testDelete(){
+        userMapper.delete(7);
+        sqlSession.commit();
+    }
+
+    @Test
+    public void testFindById(){
+        User user = userMapper.findById(1);
+        System.out.println(user);
+    }
 }
